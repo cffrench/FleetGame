@@ -1,11 +1,19 @@
 #include"FleetGame.h"
 
+Hardpoint::Hardpoint() {
+    
+}
+
 Hardpoint::Hardpoint(string nameParam, string manufacturerParam, double hpParam, double armorParam, int minCrewParam) {
     name = nameParam;
     manufacturer = manufacturerParam;
     hitPoints = hpParam;
     armor = armorParam;
     crewRequirement = minCrewParam;
+}
+
+Weapon::Weapon() {
+
 }
 
 Weapon::Weapon(string nameParam, string manufacturerParam, double hpParam, double armorParam, int minCrewParam, string weaponTypeParam, int numShotsParam, double fireRateParam, double damagePerShotParam, double accuracyParam, double trackingParam, double armorPenetrationParam) : Hardpoint(nameParam, manufacturerParam, hpParam, armorParam, minCrewParam) {
@@ -29,7 +37,7 @@ vector<Weapon> createWeaponList() {
     }
     string temp = "";
     while(getline(inFile, temp)){ //file there are still lines to read, grab a line and add to end of vector
-        weaponList.push_back(readWeapon(temp));
+        // weaponList.push_back(readWeapon(temp));
     }
     inFile.close();
     // for(int i=0; i<playerList.size(); i++) {

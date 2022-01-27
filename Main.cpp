@@ -4,11 +4,12 @@ int main() {
     cout << VersionNumber << endl;
     cout << VersionChanges << endl;
 
-    string currentCommand  = "";
+    string currentCommand  = "a";
 
-    while (currentCommand == "") {
+    while (currentCommand == "a") {
         cout << "1. Examine ships \n" << endl;
         cin >> currentCommand;
+
     }
 
 

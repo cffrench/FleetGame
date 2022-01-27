@@ -68,8 +68,10 @@ class Weapon : public Hardpoint {
         double accuracy;            //Chance to hit with each individual shot. 90% accuracy means you have a 90% chance to hit a target with 0% evasion.
         double tracking;            //Negates evasion. So if a weapon has 15 tracking it will subtract 15 from the evasion of the target to a minimum of 0.
         double armorPenetration;    //Reduces the effective armor damage reduction of the target.
+        double range;               //The maximum range the weapon can be fired at.
 
 
 };
 
+Weapon readWeapon(string weaponString);
 #endif
